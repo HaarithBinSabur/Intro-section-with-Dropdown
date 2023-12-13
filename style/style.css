@@ -1,0 +1,298 @@
+/* images display */
+img{
+    display: inline-block;
+}
+/*  */
+
+body{
+    height: 100%;
+    font-family: 'Epilogue', sans-serif;
+    margin:0;
+    padding: 1.5rem;
+}
+
+@media(max-width:600px){
+    body{
+        padding: 0;
+    }
+}
+/* NAVBAR AND ITS CONTENT */
+header{
+    height: 10%;
+    
+}
+
+h1, nav, ul, li, a{
+    display: inline-block;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+    
+    
+}
+a:hover{
+    color: hsl(0, 0%, 8%);
+}
+h1{
+    font-size: 30px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width:600px) {
+    nav{
+        margin:1rem;
+    }
+    
+}
+
+@media ( max-width:750px ) {
+    ul, .login, .register{
+        display:none;
+    }
+    
+}
+@media  (min-width: 750px){
+    #menu-icon{
+        display: none;
+        
+    }
+}
+
+#menu-icon{
+    cursor: pointer;
+}
+
+ul > li{
+    padding: 1rem;
+}
+
+.login, .register{
+    padding-left:10px ;
+    padding-right:10px ;
+    color: hsl(0, 0%, 41%);
+}
+
+.login:hover{
+    color: hsl(0, 0%, 8%);
+}
+
+.register{
+    font-family: 'Epilogue', sans-serif;
+    background-color: transparent;
+    width:80px ;
+    height:35px ;
+    border: 1.7px solid hsl(0, 0%, 8%);
+    border-radius: 9px;
+    cursor: pointer;
+}
+.register:hover{
+    background-color: hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 98%);
+}
+
+
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    padding: 2rem;
+    
+}
+
+@media (max-width: 600px){
+    main{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+    }
+    
+}
+main > article{
+    width: 40%;
+}
+
+@media (max-width:600px) {
+    
+    main > article{
+        width: 100%;
+    }
+    
+}
+
+#main-heading{
+    font-size: 55px;
+    width: 64%;
+    margin:0;
+    margin-top: 100px;
+}
+
+#main-para{
+    color: hsl(0, 0%, 41%);
+    font-size: 15px;
+    margin: 0;
+    width: 70%;
+    margin-top: 30px;
+    line-height: 20px;
+}
+
+@media (max-width:600px){
+    #main-heading{
+        font-size:38px;
+        width: 100%;
+        margin-top: 35px;
+    }
+    
+    #main-para{
+        font-size: 18px;
+        width: 100%;
+    }
+    
+}
+
+#main-btn{
+    margin-top:50px ;
+    width: 150px;
+    height:50px;
+    border-radius: 13px;
+    border:none;
+    background-color: hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 91%) ;
+    font-size:15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+#main-btn:hover{
+    color: hsl(0, 0%, 8%);
+    background-color: hsl(0, 0%, 98%);
+    border: 1px solid hsl(0, 0%, 8%);
+}
+
+
+#main-images > img{
+    margin-top: 100px;
+    padding: 10px;
+    width:80px;
+}
+
+@media( max-width:600px){
+    #main-images > img{
+        width: 75px;
+        margin-top: 40px;
+    }
+}
+
+#biggest-image{
+    object-fit: contain;
+    width: 30%;
+}
+
+#smaller-image{
+    object-fit: contain;
+    width: 100%;
+    display: none;
+}
+
+@media (max-width:600px){
+    #biggest-image{
+        display: none;
+    }
+    #smaller-image{
+        display: flex;
+    }
+}
+
+/*
+==========
+ ~ FEATURES ~
+==========
+ */
+
+.features{
+    background-color: hsl(0, 0%, 98%);
+    border:none;
+    box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 50px 0px;
+    border-radius: 13px;
+    padding: 1rem;
+    position: absolute;
+}
+
+#main-features{
+    width: 120px;
+    height: 130px;
+    transform: translateY(20px);
+    left: 90px;
+    display: grid;
+    grid-template-columns: 20px 30px;
+    grid-template-rows: 25% 30px;
+    gap: 5px;
+}
+
+#main-features > img{
+    width: 15px;
+    height: 15px;
+}
+#main-features > p{
+    margin: 0;
+    padding:0;
+    cursor: pointer;
+}
+
+#company-features{
+    transform: translateY(20px);
+    left:270px;
+    padding: 1rem;
+    width:80px;
+    height:110px;
+    margin:0;
+}
+
+#company-features > p{
+    cursor: pointer;
+}
+
+
+/* OVERLAY */
+
+#overlay{
+    width: 50%;
+    height: 100%;
+    left: 90px;
+    display: grid;
+    grid-template-columns: 20px 30px;
+    grid-template-rows: 25% 30px;
+    gap: 5px;
+    float: right;
+    display: none;
+    
+}
+#overlay > .active{
+    display: block;
+}
+
+@media (min-width:600px) {
+ #overlay{
+    display: none;
+ }
+}
+
+#close-menu{
+    background:none;
+    border:none;
+    cursor: pointer;
+}
