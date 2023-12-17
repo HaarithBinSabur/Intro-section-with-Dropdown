@@ -1,60 +1,39 @@
-DocumentFragment.addEventListener('DOMcontentLoaded', function () {
-    const featuredropDownBtn = document.getElementById('featureDown-btn')
-    const featureMenu = document.getElementById('main-feature')
-    const companydropDownBtn = document.getElementById('companyDown-btn')
-    const companyMenu = document.getElementById('company-features')
-
-    // OVERLAY
-    
+document.addEventListener('DOMContentLoaded', function () {
+    const featuresDropdownBtn = document.getElementById('featuresDropdownBtn');
+    const featuresDropdownMenu = document.getElementById('featuresDropdownMenu');
+    const companyDropdownBtn = document.getElementById('companyDropdownBtn');
+    const companyDropdownMenu = document.getElementById('companyDropdownMenu');
     const overlay = document.querySelector('.overlay');
-
-    //DROPDOWN ARROW BUTTONS 
-    
-    featuredropDownBtn.addEventListener('click', function () {
-        featureMenu.classList.toggle('active');
-
-        if (featuredropDownBtn.scroll.includes('icon-arrow-down.svg')){
-            featuredropDownBtn.src = 'images/icon-arrow-up.svg';
-            
-        } else {
-            featuredropDownBtn.src = 'images/icon-arrow-down.svg';
-        }
+  
+    featuresDropdownBtn.addEventListener('click', function () {
+      featuresDropdownMenu.classList.toggle('active');
+      if (featuresDropdownBtn.src.includes('icon-arrow-down.svg')) {
+        featuresDropdownBtn.src = 'images/icon-arrow-up.svg';
+      } else {
+        featuresDropdownBtn.src = 'images/icon-arrow-down.svg';
+      }
     });
-
-    companydropDownBtn.addEventListener('click', function () {
-        companyMenu.classList.toggle('active');
-        if (companyMenu.src.includes('icon-arrow-down.svg')) {
-            companyMenu.src = 'images/icon-arrow-up.svg';
-        }else {
-            companydropDownBtn.src = 'images/icon-arrow-down.svg'
-        }
-    })
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-})
+  
+    companyDropdownBtn.addEventListener('click', function () {
+      companyDropdownMenu.classList.toggle('active');
+      if (companyDropdownBtn.src.includes('icon-arrow-down.svg')) {
+        companyDropdownBtn.src = 'images/icon-arrow-up.svg';
+      } else {
+        companyDropdownBtn.src = 'images/icon-arrow-down.svg';
+      }
+    });
+  
+    const toggleButton = document.getElementById('toggleButton');
+    const offcanvas = document.getElementById('offcanvas');
+  
+    toggleButton.addEventListener('click', function () {
+      offcanvas.classList.toggle('active');
+      overlay.classList.toggle('active');
+    });
+  
+    const closeButton = document.getElementById('closeButton');
+    closeButton.addEventListener('click', function () {
+      offcanvas.classList.remove('active');
+      overlay.classList.remove('active');
+    });
+  });
